@@ -182,6 +182,17 @@ img{
         --font-size-xl: 1.5rem;
         --font-size-xxl: 1.8rem;
     }
+
+    .show-mobile-menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
     
     .navbar :where(#menu-close-button, #menu-open-button){
         font-size: var(--font-size-l);
@@ -209,6 +220,11 @@ img{
         left: -300px;
         background-color: var(--white-color);
         padding-top: 100px;
+        transition: left 0.2s ease;
+    }
+
+    .show-mobile-menu .navbar .nav-menu{
+        left: 0px;
     }
     
     .navbar .nav-menu .nav-link{
