@@ -23,13 +23,13 @@ const swiper = new Swiper(".slider-wrapper", {
 
   loop: true,
   spaceBetween: 20,
+  grabCursor: true,
 
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
-    
   },
 
   // Navigation arrows

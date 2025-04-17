@@ -434,4 +434,11 @@ img {
     aspect-ratio: 1;
     margin-bottom: 10px;
   }
+  .testimonials-section .slider-wrapper{
+    overflow: hidden;
+    margin: 0 0 40px;
+  }
+  .testimonials-section .swiper-button-color {
+    display: none;;
+  }
 }
