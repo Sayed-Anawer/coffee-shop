@@ -259,6 +259,7 @@ img {
 }
 .menu-section .menu-list .menu-item {
   display: flex;
+  max-width: 100%;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -270,6 +271,9 @@ img {
   aspect-ratio: 1;
   margin-bottom: 15px;
 }
+
+/* Testimonials Section Styles */
+
 /* Media query for Responsive device  */
 
 @media screen and (max-width: 900px) {
@@ -368,7 +372,7 @@ img {
   .menu-section .menu-list {
     /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(1, 300px);
+    grid-template-columns: repeat(1, 320px);
     gap: 90px;
     align-items: center;
     justify-content: center;
