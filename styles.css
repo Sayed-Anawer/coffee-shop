@@ -8,7 +8,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
 
+  
+}
 /* Reuse styles */
 
 :root {
@@ -283,6 +287,7 @@ img {
   margin: 0 60px 50px;
 }
 .testimonials-section .testimonial {
+  user-select: none;
   display: flex;
   padding: 35px;
   flex-direction: column;
@@ -370,7 +375,7 @@ img {
   font-size: var(--font-size-m);
   color: var(--primary-color);
 }
-.contact-section .contact-form{
+.contact-section .contact-form {
   max-width: 50%;
 }
 .contact-section .contact-form .form-input {
@@ -411,6 +416,39 @@ img {
   color: var(--primary-color);
 }
 
+/* Footer Section Styles */
+.footer-section {
+  background-color: var(--dark-color);
+  padding: 50px 0;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+  color: var(--white-color);
+  font-size: var(--font-size-n);
+  transition: 0.2s ease;
+}
+.footer-section .section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.footer-section .social-link-list {
+  display: flex;
+  gap: 25px;
+}
+.footer-section .social-link-list .social-link {
+  font-size: var(--font-size-l);
+  color: var(--white-color);
+}
+.footer-section .social-link-list .social-link:hover,
+.policy-text .policy-link:hover {
+  color: var(--secondary-color);
+}
+.footer-section .policy-text .separator {
+  margin: 0 10px;
+  color: var(--white-color);
+}
 /* Media query for Responsive device  */
 
 @media screen and (max-width: 900px) {
@@ -478,7 +516,8 @@ img {
     justify-content: center;
     padding: 30px 20px 20px;
   }
-  .hero-section .hero-details :is(.subtitle, .description) ,.contact-section  .contact-form{
+  .hero-section .hero-details :is(.subtitle, .description),
+  .contact-section .contact-form {
     max-width: 100%;
   }
   .about-section .about-details {
@@ -536,10 +575,16 @@ img {
 
   /* Contact Us */
 
-  .contact-section .section-content{
+  .contact-section .section-content {
     flex-direction: column-reverse;
     /* align-items: flex-start; */
     /* justify-content: flex-start; */
     gap: 70px;
+  }
+
+  /* Footer Section */
+  .footer-section .section-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
