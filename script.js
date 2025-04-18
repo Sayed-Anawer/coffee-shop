@@ -1,3 +1,35 @@
+// Initialize EmailJS
+(function () {
+  emailjs.init({
+    publicKey: EMAILJS_PUBLIC_KEY,
+  });
+})();
+
+// Email JS functionality
+window.onload = function () {
+  const btn = document.getElementById("submit-button");
+  const form = document.getElementById("form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    btn.value = "Sending...";
+
+    emailjs
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+      .then(() => {
+        btn.value = "Send";
+        alert("Message Sent!");
+        form.reset();
+      })
+      .catch((err) => {
+        btn.value = "Send";
+        alert(JSON.stringify(err));
+      });
+  });
+};
+
+// Mobile Menu Functionality
 const openMenuButton = document.querySelector("#menu-open-button");
 const navLinks = document.querySelectorAll(".nav-link");
 const closeMenuButton = document.querySelector("#menu-close-button");

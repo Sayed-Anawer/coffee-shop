@@ -8,10 +8,8 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
-
-  
 }
 /* Reuse styles */
 
@@ -410,6 +408,7 @@ img {
   color: var(--white-color);
   border: 1px solid var(--primary-color);
   transition: 0.3s ease;
+  cursor: pointer;
 }
 .contact-section .contact-form .submit-button:hover {
   background-color: transparent;
